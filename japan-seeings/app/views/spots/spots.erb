@@ -1,6 +1,12 @@
 <h1> Welcome, <%= current_user.username %></h1>
 <% @spots.each do |spot| %>
-<h4><a href="/spots/<%=spot.id%>"><%= spot.content %> </a></h4>
+<h4><%= spot.name %></h4>
+<p> Location </p>
+<h4><%= spot.location %></h4>
+<p> Time of Visit </p>
+<h4><%= spot.visited %></h4>
+<p> Rated </p>
+<h4><%= spot.rating %></h4>
 <% end %>
 <br>
 <h3><a href="/spots/new">New Spot</a></h3>
