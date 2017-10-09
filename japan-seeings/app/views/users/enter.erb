@@ -1,0 +1,11 @@
+<h1> <%= @user.username.capitalize %>'s Board </h1>
+<br>
+
+<% @user.spots.each do |spot| %>
+<h4><%= spot.name %> </h4>
+<p><%= spot.location %> </p>
+<p><%= spot.visited %> </p>
+<p><%= spot.rating %> </p>
+<% end %>
+
+<p><a href="/spots"> Pull back to Minas Tirith </a></p>
