@@ -8,6 +8,7 @@
     <th>Location</th>
     <th>Time of Visit</th>
     <th>Rating</th>
+    <th>Details</th>
   </tr>
   <% @spots.each do |spot| %>
   <tr>
@@ -15,6 +16,7 @@
   <td><%= spot.location %></td>
   <td><%= spot.time_of_visit %></td>
   <td><%= spot.rating %></td>
+  <td><%= spot.details %></td>
   <% end %>
 </tr>
 </table>
