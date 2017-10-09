@@ -38,3 +38,42 @@ class SpotsController < ApplicationController
       redirect "/login"
     end
   end
+
+  get '/spots/:id/edit' do
+    if logged_in?
+      @spot = current_user.spots.find(params[:id])
+      erb :'/spots/edit_spot'
+    else
+      redirect "/login"
+    end
+  end
+
+  patch '/spots/:id' do
+    if logged_in?
+      @spot = current_user.spots.find(params[:id])
+      if params[:name] != "" && params[:location] != "" && params[:visited] != "" && params[:rating] != ""
+        @spot.update(:name => params[:name], :location => params[:location], :visited => params[:visited], :rating => params[:rating])
+        redirect "/spots/#{@spot.id}"
+      else
+        redirect "/spots/#{@spot.id}/edit"
+      end
+    else
+      redirect "/login"
+    end
+  end
+
+  delete '/spots/:id/delete' do
+    if logged_in?
+      @spot = Spot.find(params[:id])
+      if @spot.user_id == current_user.id
+        @spot.delete
+        redirect '/spots'
+      else
+        redirect '/spots'
+      end
+    else
+      redirect '/login'
+    end
+  end
+
+end
