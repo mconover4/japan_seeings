@@ -1,0 +1,23 @@
+<div class="container">
+  <header><center><img src="https://i.imgur.com/7ekLS7T.png" height="75" width="75" class="img-responsive main-image"></center></header>
+
+  <div class="col-md-8 col-md-offset-2">
+<center><h2> Edit your spot </h2></center>
+
+
+<form method="post" action="/spots/<%=@spot.id%>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <p><label>Name:</label><br>
+  <input type="text" name="name" placeholder="<%= @spot.name%>"></p>
+  <p><label>Where?</label><br>
+  <input type="text" name="location" placeholder="<%= @spot.location%>"></p>
+  <p><label>Time of Visit:</label><br>
+  <input type="text" name="visited" placeholder="<%= @spot.visited%>"></p>
+  <p><label>What do you rate it out of 10?</label><br>
+  <input type="text" name="rating" placeholder="<%= @spot.rating%>"></p>
+
+  <input class="button" type="submit" value="submit">
+</form>
+</div>
+</div>
