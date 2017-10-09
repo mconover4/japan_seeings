@@ -1,0 +1,36 @@
+  <header><center><img src="https://i.imgur.com/7ekLS7T.png" height="75" width="75" class="img-responsive main-image"></center></header>
+<center><h2> Your Japan Seeing </h2>
+
+  <table style="width:80%">
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Time of Visit</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+    <td><%= @spot.name %></td>
+    <td><%= @spot.location %></td>
+    <td><%= @spot.visited %></td>
+    <td><%= @spot.rating %></td>
+  </tr>
+  </table>
+  <br>
+
+<!-- <h3><%= @spot.name %></h3>
+<h4> Location<br>
+<%= @spot.location %><br>
+ Time of Visit<br>
+<%= @spot.visited %><br>
+Rated<br>
+<%= @spot.rating %></h4>
+<br><br> -->
+
+  <form action="/spots/<%= @spot.id%>/delete" method="post">
+    <input type="hidden" name="_method" id="hidden" value="delete">
+    <input type="submit" value="Delete Spot" name="delete">
+  </form>
+  <br>
+    <p><a href="/spots/<%=@spot.id%>/edit"> Edit Spot </a></p>
+    <p><a href="/spots"> Return to Spots </a></p>
+  </center>
