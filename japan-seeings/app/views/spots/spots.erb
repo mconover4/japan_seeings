@@ -1,15 +1,26 @@
-<h1> Welcome, <%= current_user.username %></h1>
-<% @spots.each do |spot| %>
-<h4><%= spot.name %></h4>
-<p> Location </p>
-<h4><%= spot.location %></h4>
-<p> Time of Visit </p>
-<h4><%= spot.visited %></h4>
-<p> Rated </p>
-<h4><%= spot.rating %></h4>
-<% end %>
+<header><center><img src="https://i.imgur.com/7ekLS7T.png" height="75" width="75" class="img-responsive main-image"></center></header>
+<center><h2> Welcome to the club </h2>
+
+<h3> Check out spots </h3>
+<table style="width:80%">
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Time of Visit</th>
+    <th>Rating</th>
+  </tr>
+  <% @spots.each do |spot| %>
+  <tr>
+  <td><a href="/spots/<%=spot.id%>"> <%= spot.name %></a></td>
+  <td><%= spot.location %></td>
+  <td><%= spot.time_of_visit %></td>
+  <td><%= spot.rating %></td>
+  <% end %>
+</tr>
+</table>
+
 <br>
-<h3><a href="/spots/new">New Spot</a></h3>
-<h3><a href="/users/<%=current_user.slug %>">My Spots</a></h3>
+<h3><a href="/spots/new">New Seeing</a> ||
+<a href="/users/<%=current_user.slug %>">My Spottings</a></h3>
 <br>
-<p><a href="/logout">Log out</a></p>
+<p style="text-align:right;"><a href="/logout">Heading out?</a></p>

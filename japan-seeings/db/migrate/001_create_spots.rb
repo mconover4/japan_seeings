@@ -4,7 +4,7 @@ class CreateSpots < ActiveRecord::Migration
       s.string :name
       s.integer :user_id
       s.string :location
-      s.datetime :visited
+      s.integer :time_of_visit
       s.float :rating
     end
   end

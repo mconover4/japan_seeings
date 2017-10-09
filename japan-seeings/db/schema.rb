@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(version: 2) do
 
   create_table "spots", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.string   "location"
-    t.datetime "visited"
-    t.float    "rating"
+    t.string  "name"
+    t.integer "user_id"
+    t.string  "location"
+    t.integer "time_of_visit"
+    t.float   "rating"
   end
 
   create_table "users", force: :cascade do |t|

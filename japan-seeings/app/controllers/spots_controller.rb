@@ -19,8 +19,8 @@ class SpotsController < ApplicationController
 
   post '/spots' do
     if logged_in?
-      if params[:name] != "" && params[:location] != "" && params[:visited] != "" && params[:rating] != ""
-        @spot = current_user.spots.create(:name => params[:name], :location => params[:location], :visited => params[:visited], :rating => params[:rating])
+      if params[:name] != "" && params[:location] != "" && params[:time_of_visit] != "" && params[:rating] != ""
+        @spot = current_user.spots.create(:name => params[:name], :location => params[:location], :time_of_visit => params[:time_of_visit], :rating => params[:rating])
         redirect '/spots'
       else
         redirect to '/spots/new'
@@ -51,8 +51,8 @@ class SpotsController < ApplicationController
   patch '/spots/:id' do
     if logged_in?
       @spot = current_user.spots.find(params[:id])
-      if params[:name] != "" && params[:location] != "" && params[:visited] != "" && params[:rating] != ""
-        @spot.update(:name => params[:name], :location => params[:location], :visited => params[:visited], :rating => params[:rating])
+      if params[:name] != "" && params[:location] != "" && params[:time_of_visit] != "" && params[:rating] != ""
+        @spot.update(:name => params[:name], :location => params[:location], :time_of_visit => params[:time_of_visit], :rating => params[:rating])
         redirect "/spots/#{@spot.id}"
       else
         redirect "/spots/#{@spot.id}/edit"

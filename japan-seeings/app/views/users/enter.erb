@@ -14,9 +14,9 @@
       </tr>
       <% @user.spots.each do |spot| %>
       <tr>
-      <td><%= spot.name %></td>
+      <td><a href="/spots/<%=spot.id%>"><%= spot.name %></td>
       <td><%= spot.location %></td>
-      <td><%= spot.visited %></td>
+      <td><%= spot.time_of_visit %></td>
       <td><%= spot.rating %></td>
       <% end %>
     </tr>
