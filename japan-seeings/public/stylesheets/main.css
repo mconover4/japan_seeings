@@ -49,6 +49,15 @@ td, th {
 
 tr:hover{background-color:#ededed}
 
+#overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    text-overflow: ellipsis;
+
+}
+
 /* --- Links --- */
 a {
   font-family: 'Nunito', sans-serif;
