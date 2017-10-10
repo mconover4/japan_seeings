@@ -61,12 +61,12 @@ a:hover {
 
 /* --- Buttons --- */
 
-input[type=text], select {
+input[type=text], input[type=password], select {
     width: 200px;
     padding: 10px 15px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid #ccc;
   }
 
 input[type=button], input[type=submit]{
@@ -80,7 +80,7 @@ input[type=button], input[type=submit]{
     cursor: pointer;
 }
 
-input[type=submit], input[value=Delete_Spot]{
+input[value=Delete_Spot]{
     background-color: black;
     border: none;
     color: white;
