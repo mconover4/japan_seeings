@@ -11,3 +11,20 @@ It's pretty simple and that is part of the point. It's easy to fill your board w
 
 To use this app, just clone, run `rake db:migrate` and then run `shotgun`.
 Everything should be set up.
+
+## Contributors Guide
+
+We're happy to accept contributors. Please read ahead to learn how to make the most meaningful and useful impact.
+
+# Submit a Pull Request to Suggest an Improvement
+
+If you see an opportunity for improvement and can make the change yourself go ahead and use a typical git workflow to make it happen:
+
+Fork this curriculum repository
+Make the change on your fork, with descriptive commits in the standard format
+Open a Pull Request against this repo
+A curriculum owner will review your change and approve or comment on it in due course.
+
+## License
+
+See [LICENSE](https://github.com/msickler/japan_seeings/blob/master/LICENSE) for the project license.
