@@ -9,7 +9,7 @@
     <th>Location</th>
     <th>Time of Visit</th>
     <th>Rating</th>
-    <th>Details</th>
+    <th>Comments</th>
   </tr>
   <% @spots.each do |spot| %>
   <tr>
@@ -17,7 +17,7 @@
   <td><%= spot.location.capitalize %></td>
   <td><%= spot.time_of_visit %></td>
   <td><%= spot.rating %></td>
-  <td id="overflow"><%= spot.details %></td>
+  <td id="overflow"><%= spot.comments %></td>
   <% end %>
 </tr>
 </table>
