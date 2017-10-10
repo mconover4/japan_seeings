@@ -15,7 +15,8 @@ Specs:
     Current user must match user's spots to modify them
 - [x] Include user input validations
     User requires username, email and password to sign up and to fill the form properly before posting a Spot
-- [ ] Display validation failures to user with error message (example form URL e.g. /posts/new)
+- [x] Display validation failures to user with error message (example form URL e.g. /posts/new)
+    Users can't submit a spot without the required fields, so it prompts an error message if there was an error
 - [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
