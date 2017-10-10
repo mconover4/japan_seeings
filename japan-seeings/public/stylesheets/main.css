@@ -35,7 +35,7 @@ li a:hover:not(.active) {
     color: black;
 }
 
-
+/* --- Tables --- */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -48,6 +48,7 @@ td, th {
 }
 
 tr:hover{background-color:#ededed}
+
 /* --- Links --- */
 a {
   font-family: 'Nunito', sans-serif;
@@ -141,7 +142,7 @@ input[type=submit]:hover {
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
+    margin: 50px auto;
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
     width: 85%;
