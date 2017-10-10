@@ -143,10 +143,10 @@ input[type=submit]:hover {
 
   /* --- Welcome Page Styles --- */
   body {
-    background-image: url('https://i.imgur.com/QYd9dPU.png');
+    background-image: url('https://i.imgur.com/QYd9dPU.png'), url('https://i.imgur.com/HKWBjst.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 100% 100%;
+    background-position: 100% 100%, bottom;
     background-color: black;
     color: #333;
     font-family: 'Nunito', sans-serif;
@@ -165,7 +165,7 @@ input[type=submit]:hover {
     margin: 50px auto;
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
-    width: 85%;
+    width: 70%;
   }
 
   h1 {
