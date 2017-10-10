@@ -1,4 +1,7 @@
+require 'rack-flash'
+
 class SpotsController < ApplicationController
+  use Rack::Flash
 
   get '/spots' do
     if logged_in?
@@ -23,6 +26,7 @@ class SpotsController < ApplicationController
         @spot = current_user.spots.create(:name => params[:name], :location => params[:location], :time_of_visit => params[:time_of_visit], :rating => params[:rating], :comments => params[:comments])
         redirect '/spots'
       else
+        flash[:message] = "Failed to save spot, you must fill in the boxes"
         redirect to '/spots/new'
       end
     else
@@ -55,6 +59,7 @@ class SpotsController < ApplicationController
         @spot.update(:name => params[:name], :location => params[:location], :time_of_visit => params[:time_of_visit], :rating => params[:rating], :comments => params[:comments])
         redirect "/spots/#{@spot.id}"
       else
+        flash[:message] = "Failed to save spot, you must fill in the boxes"
         redirect "/spots/#{@spot.id}/edit"
       end
     else

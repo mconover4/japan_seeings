@@ -1,3 +1,7 @@
+<strong><% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %></strong>
+
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
     <center><h2> Your secret is safe with us </h2></center>
