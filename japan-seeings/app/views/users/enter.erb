@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="col-md-8 col-md-offset-2">
-<center><h2> <%= @user.username.capitalize %>'s Board  </h2>
+    <center><h2> <%= @user.username.capitalize %>'s Board  </h2>
 
   <table style="width:90%">
     <tr>
@@ -24,12 +24,12 @@
     </tr>
     </table>
     <br>
-
     <p><a href="/spots"> Pull back to Minas Tirith </a> | <a href="/spots/new">New Spot</a></p>
 
-</center>
+    </center>
+  </div>
 </div>
-</div>
+
 <script>
 function sortTable(){
     var table = document.getElementById("myTable");

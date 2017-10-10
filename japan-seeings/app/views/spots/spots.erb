@@ -1,31 +1,31 @@
 
 <center><h2> Welcome to the club </h2>
 
-<h3> Check out our spots </h3>
+  <h3> Check out our spots </h3>
 
-<table style="width:90%">
-  <tr>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Date</th>
-    <th>Rating</th>
-    <th>Comments</th>
-  </tr>
-</table>
-<table style="width:90%" id="myTable">
-    <% @spots.each do |spot| %>
-  <tr>
-  <td><a href="/spots/<%=spot.id%>"> <%= spot.name.capitalize %></a></td>
-  <td><%= spot.location.capitalize %></td>
-  <td><%= spot.time_of_visit %></td>
-  <td><%= spot.rating %></td>
-  <td id="overflow"><%= spot.comments %></td>
-  <% end %>
-</tr>
-</table>
-<br>
-</center>
-<a href="/users/<%=current_user.slug%>">Your board</a>
+    <table style="width:90%">
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Rating</th>
+        <th>Comments</th>
+      </tr>
+    </table>
+    <table style="width:90%" id="myTable">
+        <% @spots.each do |spot| %>
+      <tr>
+      <td><a href="/spots/<%=spot.id%>"> <%= spot.name.capitalize %></a></td>
+      <td><%= spot.location.capitalize %></td>
+      <td><%= spot.time_of_visit %></td>
+      <td><%= spot.rating %></td>
+      <td id="overflow"><%= spot.comments %></td>
+      <% end %>
+    </tr>
+    </table>
+      <br>
+    </center>
+    <a href="/users/<%=current_user.slug%>">Your board</a>
 <script>
 function sortTable(){
     var table = document.getElementById("myTable");
