@@ -13,8 +13,8 @@
   </tr>
   <% @spots.each do |spot| %>
   <tr>
-  <td><a href="/spots/<%=spot.id%>"> <%= spot.name %></a></td>
-  <td><%= spot.location %></td>
+  <td><a href="/spots/<%=spot.id%>"> <%= spot.name.capitalize %></a></td>
+  <td><%= spot.location.capitalize %></td>
   <td><%= spot.time_of_visit %></td>
   <td><%= spot.rating %></td>
   <td><%= spot.details %></td>

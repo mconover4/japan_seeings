@@ -21,8 +21,7 @@
   <form action="/spots/<%= @spot.id%>/delete" method="post">
     <input type="hidden" name="_method" id="hidden" value="delete">
     <input type="submit" value="Delete Spot" name="delete">
-  </form>
+  </form></center>
   <br>
-    <p><a href="/spots/<%=@spot.id%>/edit"> Edit Spot </a></p>
-    <p><a href="/spots"> Return to Spots </a></p>
-  </center>
+    <p><a href="/spots/<%=@spot.id%>/edit"> Edit Spot </a> |
+    <a href="/spots"> Return to Spots </a></p>
