@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro|Nunito|Titillium+Web');
 
+/* ------- Navbar ------ */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    padding: 7px 10px 10px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #d11010;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -52,10 +88,10 @@ input[type=submit]:hover {
     background-color: black;
     border: 1px solid white;
     color: white;
-    padding: 10px 25px;
+    padding: 10px 20px 7px;
+     margin: auto;
     text-align: center;
     text-decoration: none;
-    float: left;
     display: inline-block;
     font-size: 13px;
     cursor: pointer;
