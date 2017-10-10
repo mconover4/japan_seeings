@@ -28,16 +28,23 @@ tr:nth-child(even) {
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-image: url('https://i.imgur.com/QYd9dPU.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+
+    background-color: black;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
   }
 
-
-
   .wrapper {
     background: #fff;
+    background-image: url('https://i.imgur.com/QYd9dPU.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 100%;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);

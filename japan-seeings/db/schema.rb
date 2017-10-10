@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "spots", force: :cascade do |t|
     t.string  "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2) do
     t.string  "location"
     t.integer "time_of_visit"
     t.float   "rating"
+    t.string  "details"
   end
 
   create_table "users", force: :cascade do |t|
