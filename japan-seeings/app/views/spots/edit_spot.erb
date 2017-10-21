@@ -12,15 +12,15 @@
       <input id="hidden" type="hidden" name="_method" value="patch">
 
         <p><label>Name:</label><br>
-        <input type="text" name="name" placeholder="<%= @spot.name%>"></p>
+        <input type="text" name="spot[name]" placeholder="<%= @spot.name%>"></p>
         <p><label>Location:</label><br>
-        <input type="text" name="location" placeholder="<%= @spot.location%>"></p>
+        <input type="text" name="spot[location]" placeholder="<%= @spot.location%>"></p>
         <p><label>Time of Visit:</label><br>
-        <input type="text" name="time_of_visit" placeholder="<%= @spot.time_of_visit%>"></p>
+        <input type="text" name="spot[time_of_visit]" placeholder="<%= @spot.time_of_visit%>"></p>
         <p><label>Rate it:</label><br>
-        <input type="text" name="rating" placeholder="<%= @spot.rating%>"></p>
+        <input type="text" name="spot[rating]" placeholder="<%= @spot.rating%>"></p>
         <p><label>Comments:</label><br>
-        <input type="text" name="rating" placeholder="<%= @spot.comments%>"></p>
+        <input type="text" name="spot[rating]" placeholder="<%= @spot.comments%>"></p>
 
       <input class="button" type="submit" value="submit">
     </form>

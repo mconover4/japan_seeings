@@ -1,4 +1,5 @@
 class Spot < ActiveRecord::Base
   belongs_to :user
-  validates :user_id, presence: true
+
+  validates :name, :location, :rating, :user_id, :time_of_visit, presence: true
 end
