@@ -9,7 +9,7 @@ It's pretty simple and that is part of the point. It's easy to fill your board w
 
 ## Usage
 
-To use this app, just clone, run `rake db:migrate` and then run `shotgun`.
+To use this app, just clone, run `bundle install`, followed by `rake db:migrate` and then run `shotgun`.
 Everything should be set up.
 
 ## Contributors Guide

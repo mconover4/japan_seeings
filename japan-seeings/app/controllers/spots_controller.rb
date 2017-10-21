@@ -45,8 +45,14 @@ class SpotsController < ApplicationController
 
   get '/spots/:id/edit' do
     if logged_in?
-      @spot = current_user.spots.find(params[:id])
-      erb :'/spots/edit_spot'
+        @spot = Spot.find(params[:id])
+      #@spot = current_user.spots.find(params[:id])
+      if @spot.user_id == current_user.id
+          erb :'/spots/edit_spot'
+      else
+        flash[:message] = "This Spot doesn't belong to you."
+        redirect '/spots'
+      end
     else
       redirect "/login"
     end
@@ -74,6 +80,7 @@ class SpotsController < ApplicationController
         @spot.delete
         redirect '/spots'
       else
+        flash[:message] = "This Spot doesn't belong to you."
         redirect '/spots'
       end
     else

@@ -1,4 +1,6 @@
-
+<strong><% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %></strong>
 <center><h2> Welcome to the club </h2>
 
   <h3> Check out our spots </h3>
